@@ -2,6 +2,11 @@ class BankAccount {
   double current_balance = 0;
   String? account_title;
   List myTransations = [];
+  BankAccount({
+    required double current_balance,
+    required String account_title,
+  })  : this.current_balance = current_balance,
+        this.account_title = account_title;
   myTransation() {
     for (var alltrans in myTransations) {
       print('my all transations $alltrans');
@@ -21,12 +26,6 @@ class BankAccount {
       print('unable to transation');
     }
   }
-
-  BankAccount({
-    required double current_balance,
-    required String account_title,
-  })  : this.current_balance = current_balance,
-        this.account_title = account_title;
 }
 
 void main(List<String> args) {

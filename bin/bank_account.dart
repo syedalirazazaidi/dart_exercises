@@ -1,5 +1,6 @@
 class Bank {
-  Bank({required this.title, this.balance = 0});
+  Bank({required this.title, this.balance = 0}); //Default Constructor
+  Bank.newClient(this.title, this.balance);
 
   final String title;
   int balance;

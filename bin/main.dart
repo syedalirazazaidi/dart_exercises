@@ -9,16 +9,23 @@
 //   print(employee.empAge);
 //   print(employee.empSalary);
 // }
-import 'bank_account.dart';
+// import 'bank_account.dart';
+
+// void main(List<String> args) {
+//   final myAccount = Bank(title: "Aamir");
+//   print('The title of my account is ${myAccount.title}');
+//   print('The initial bank balance is ${myAccount.balance}');
+//   myAccount.dollarWithdraw = 10;
+//   myAccount.dollarDeposit = 50;
+//   myAccount.dollarWithdraw = 10;
+//   myAccount.dollarDeposit = 100;
+//   print('The bank balance in PKR ${myAccount.balance}');
+//   print('The bank balance in dollar is ${myAccount.balanceInDollar}');
+// }
+import 'inheritance_saving.dart';
 
 void main(List<String> args) {
-  final myAccount = Bank(title: "Aamir");
-  print('The title of my account is ${myAccount.title}');
-  print('The initial bank balance is ${myAccount.balance}');
-  myAccount.dollarWithdraw = 10;
-  myAccount.dollarDeposit = 50;
-  myAccount.dollarWithdraw = 10;
-  myAccount.dollarDeposit = 100;
-  print('The bank balance in PKR ${myAccount.balance}');
-  print('The bank balance in dollar is ${myAccount.balanceInDollar}');
+  SavingAccount account = SavingAccount(balance: 10000, rate: 10);
+  account.deposit(1000);
+  print(account.balance);
 }
